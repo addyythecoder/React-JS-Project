@@ -1,0 +1,50 @@
+.profile-card {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  background-color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.profile-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.profile-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  object-fit: cover;
+  border: 1px solid #aaa;
+}
+
+h2 {
+  margin: 8px 0;
+  font-size: 1.2rem;
+}
+
+.email {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 4px 0;
+  font-size: 0.9rem;
+}
+
+.bio {
+  font-style: italic;
+  margin: 8px 0;
+  color: #666;
+}
+
+em {
+  font-size: 0.85rem;
+  color: #777;
+}
