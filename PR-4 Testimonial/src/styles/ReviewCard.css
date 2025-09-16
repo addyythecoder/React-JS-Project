@@ -1,0 +1,27 @@
+.review-card {
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.review-stars {
+  margin: 5px 0;
+}
+
+.review-stars .star {
+  font-size: 18px;
+  color: lightgray;
+}
+
+.review-stars .star.filled {
+  color: gold;
+}
