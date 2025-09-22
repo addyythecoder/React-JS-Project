@@ -1,0 +1,134 @@
+/* General styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f6f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 20px;
+  font-size: 2rem;
+}
+
+/* Form styling */
+form {
+  background: #fff;
+  width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+form table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+form td {
+  padding: 10px;
+  font-size: 0.95rem;
+}
+
+input[type="text"],
+select {
+  width: 95%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  font-size: 0.9rem;
+  transition: border 0.2s;
+}
+
+input[type="text"]:focus,
+select:focus {
+  border-color: #3498db;
+}
+
+/* Radio & Checkbox */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+  accent-color: #3498db;
+}
+
+/* Submit button */
+input[type="submit"] {
+  background: #3498db;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+input[type="submit"]:hover {
+  background: #217dbb;
+}
+
+/* Table styling */
+table {
+  border-collapse: collapse;
+  width: 90%;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  font-size: 0.95rem;
+}
+
+table th {
+  background: #3498db;
+  color: #fff;
+  font-weight: 600;
+}
+
+table tr:hover {
+  background: #f1faff;
+}
+
+/* Buttons inside table */
+button {
+  background: #e74c3c;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 2px;
+  font-size: 0.85rem;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #c0392b;
+}
+
+button:nth-child(2) {
+  background: #2ecc71;
+}
+
+button:nth-child(2):hover {
+  background: #27ae60;
+}
+
+/* Image inside table */
+img {
+  border-radius: 8px;
+  object-fit: cover;
+}
+
