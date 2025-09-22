@@ -49,25 +49,39 @@ function App() {
     console.log(newmember);
   }
 
-  let submitData = (e) => {
-    e.preventDefault();
-    let newList = [...taskList];
-    if (index != -1) {
-      newList[index] = task;
-    } else {
-      task.id = Math.round(Math.random() * 100);
-      newList.push(task);
-      toast.success("Record Added Successfully!", {
-        position: 'bottom-right'
-      })
-    }
-    settaskList(newList);
-    localStorage.setItem('taskdata', JSON.stringify(newList))
-    setTask({})
-    setLoading(true);
-    setMember([]);
-    setIndex(-1);
+ let submitData = (e) => {
+  e.preventDefault();
+
+  // ✅ Validation
+  if (!task.task || !task.type || !task.priority || !task.person || !task.img) {
+    toast.error("Please fill all fields before submitting!", {
+      position: "bottom-right"
+    });
+    return; // stop execution
   }
+
+  let newList = [...taskList];
+  if (index !== -1) {
+    newList[index] = task;
+    toast.info("Record Updated Successfully!", {
+      position: "bottom-right"
+    });
+  } else {
+    task.id = Math.round(Math.random() * 100);
+    newList.push(task);
+    toast.success("Record Added Successfully!", {
+      position: 'bottom-right'
+    });
+  }
+
+  settaskList(newList);
+  localStorage.setItem('taskdata', JSON.stringify(newList));
+  setTask({});
+  setLoading(true);
+  setMember([]);
+  setIndex(-1);
+};
+
 
   let removeData = (id) => {
     let newList = [...taskList];
