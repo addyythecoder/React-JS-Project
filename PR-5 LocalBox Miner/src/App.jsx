@@ -148,12 +148,12 @@ function App() {
               Select Team
             </td>
             <td>
-              <input type="checkbox" name="member" value="vivek" onChange={(e) => getInputdata(e)}
-                checked={member.includes('vivek') ? 'checked' : ""} />Aditya
-              <input type="checkbox" name="member" value="raj" onChange={(e) => getInputdata(e)}
-               checked={member.includes('raj') ? 'checked' : ""}  />Raj
-              <input type="checkbox" name="member" value="heet" onChange={(e) => getInputdata(e)} 
-               checked={member.includes('heet') ? 'checked' : ""} />Heet
+              <input type="checkbox" name="member" value="Aditya" onChange={(e) => getInputdata(e)}
+                checked={member.includes('Aditya') ? 'checked' : ""} />Aditya
+              <input type="checkbox" name="member" value="Raj" onChange={(e) => getInputdata(e)}
+               checked={member.includes('Raj') ? 'checked' : ""}  />Raj
+              <input type="checkbox" name="member" value="Heet" onChange={(e) => getInputdata(e)} 
+               checked={member.includes('Heet') ? 'checked' : ""} />Heet
             </td>
           </tr>
 
