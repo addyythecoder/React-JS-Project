@@ -158,20 +158,6 @@ function App() {
           </tr>
 
           <tr>
-            <td>
-              Select Team
-            </td>
-            <td>
-              <input type="checkbox" name="member" value="Aditya" onChange={(e) => getInputdata(e)}
-                checked={member.includes('Aditya') ? 'checked' : ""} />Aditya
-              <input type="checkbox" name="member" value="Raj" onChange={(e) => getInputdata(e)}
-               checked={member.includes('Raj') ? 'checked' : ""}  />Raj
-              <input type="checkbox" name="member" value="Heet" onChange={(e) => getInputdata(e)} 
-               checked={member.includes('Heet') ? 'checked' : ""} />Heet
-            </td>
-          </tr>
-
-          <tr>
             <td></td>
             <td>{index != -1
               ? <input type="submit" value="Update" />
@@ -192,7 +178,6 @@ function App() {
           <td>value</td>
           <td>priority</td>
           <td>selected person</td>
-          <td>Select Team</td>
           <td>Action</td>
         </tr>
         {!loading ?
@@ -209,7 +194,6 @@ function App() {
                     <td>{v.type}</td>
                     <td>{v.priority}</td>
                     <td>{v.person}</td>
-                    <td>{v.member}</td>
                     <td>
                       <button onClick={(e) => removeData(v.id)}>Delete</button>
                       ||
