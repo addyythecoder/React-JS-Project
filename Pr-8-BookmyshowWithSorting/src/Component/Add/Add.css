@@ -1,0 +1,95 @@
+/* 🌌 Background */
+.add-bg {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #111 0%, #0a0a0a 60%, #000 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f1f5f9;
+  font-family: "Inter", sans-serif;
+}
+
+/* 🎬 Form Box */
+.form-box {
+  background: rgba(30, 30, 30, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  width: 750px;
+  color: #e5e7eb;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+/* 💫 Title */
+.form-title {
+  font-weight: 700;
+  color: #facc15;
+  text-shadow: 0 0 15px rgba(250, 204, 21, 0.5),
+    0 0 30px rgba(250, 204, 21, 0.3);
+  letter-spacing: 1px;
+  animation: glowPulse 3s infinite alternate;
+}
+
+@keyframes glowPulse {
+  from {
+    text-shadow: 0 0 10px rgba(250, 204, 21, 0.4);
+  }
+  to {
+    text-shadow: 0 0 25px rgba(250, 204, 21, 0.8);
+  }
+}
+
+/* 🏷️ Labels */
+.form-label-custom {
+  font-weight: 600;
+  color: #facc15 !important;
+}
+
+/* ✍️ Input Fields */
+.form-input-custom {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #f1f5f9 !important;
+  border-radius: 10px;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+}
+
+.form-input-custom::placeholder {
+  color: #aaa !important;
+}
+
+.form-input-custom:focus {
+  border-color: #facc15 !important;
+  box-shadow: 0 0 10px rgba(250, 204, 21, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ✨ Add Button */
+.glow-btn {
+  border-color: #facc15 !important;
+  color: #facc15 !important;
+  background: transparent;
+  border-radius: 30px !important;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.glow-btn:hover {
+  background: linear-gradient(135deg, #facc15, #fbbf24);
+  color: #111 !important;
+  box-shadow: 0 0 12px rgba(250, 204, 21, 0.4);
+  transform: translateY(-2px);
+}
+
+/* 🧭 Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #facc15;
+}
