@@ -1,0 +1,114 @@
+.custom-navbar {
+  background: rgba(20, 20, 20, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.8rem 0;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar:hover {
+  box-shadow: 0 0 25px rgba(250, 204, 21, 0.1);
+}
+
+/* 🔹 Brand Logo */
+.brand-logo {
+  font-size: 1.6rem;
+  color: #facc15 !important;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(250, 204, 21, 0.3);
+  transition: all 0.3s ease;
+}
+
+.brand-logo:hover {
+  color: #fde047 !important;
+  transform: scale(1.05);
+}
+
+/* 🔹 City Dropdown */
+.city-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #f1f5f9 !important;
+  border-radius: 50px !important;
+  font-weight: 600;
+  padding: 6px 16px;
+  transition: all 0.3s ease;
+}
+
+.city-dropdown:hover {
+  background: rgba(250, 204, 21, 0.15) !important;
+  border-color: #facc15 !important;
+  color: #fff !important;
+}
+
+/* Dropdown Menu */
+.city-menu {
+  background: #1f1f1f;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.city-item {
+  color: #f1f5f9 !important;
+  transition: all 0.2s ease;
+}
+
+.city-item:hover {
+  background: rgba(250, 204, 21, 0.1);
+  color: #facc15 !important;
+}
+
+/* 🔹 Add Button */
+.add-btn {
+  color: #facc15 !important;
+  border: 1px solid #facc15 !important;
+  background: transparent !important;
+  border-radius: 50px !important;
+  font-weight: 600;
+  padding: 6px 18px;
+  transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+  background: linear-gradient(135deg, #facc15, #fbbf24) !important;
+  color: #111 !important;
+  transform: translateY(-2px);
+}
+
+/* 🔹 Sign In Button */
+.signin-btn {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  border: none;
+  border-radius: 50px !important;
+  font-weight: 600;
+  padding: 6px 18px;
+  transition: all 0.3s ease;
+}
+
+.signin-btn:hover {
+  background: linear-gradient(135deg, #f87171, #ef4444);
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px rgba(239, 68, 68, 0.3);
+}
+
+/* 🔹 Mobile */
+@media (max-width: 768px) {
+  .custom-navbar {
+    backdrop-filter: blur(8px);
+  }
+
+  .add-btn,
+  .signin-btn,
+  .city-dropdown {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .brand-logo {
+    font-size: 1.4rem;
+  }
+}

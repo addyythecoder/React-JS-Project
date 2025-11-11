@@ -1,0 +1,164 @@
+/* 🌌 Background */
+.home-bg {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #111 0%, #0a0a0a 60%, #000 100%);
+  color: #f1f5f9;
+  overflow-x: hidden;
+}
+
+/* 💫 Title */
+.neon-title {
+  color: #facc15;
+  text-shadow: 0 0 15px rgba(250, 204, 21, 0.5),
+    0 0 30px rgba(250, 204, 21, 0.3);
+  letter-spacing: 1px;
+  animation: glowPulse 3s infinite alternate;
+}
+
+@keyframes glowPulse {
+  from {
+    text-shadow: 0 0 10px rgba(250, 204, 21, 0.4);
+  }
+  to {
+    text-shadow: 0 0 25px rgba(250, 204, 21, 0.8);
+  }
+}
+
+/* 🔍 Search / Filter */
+.search-box,
+.filter-select {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #f1f5f9 !important;
+  border-radius: 10px;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+}
+
+.search-box::placeholder {
+  color: #aaa;
+}
+
+.search-box:focus,
+.filter-select:focus {
+  border-color: #facc15;
+  box-shadow: 0 0 10px rgba(250, 204, 21, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* 🎞 Movie Card */
+.movie-card {
+  background: rgba(30, 30, 30, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  color: #e5e7eb;
+}
+
+.movie-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 25px rgba(250, 204, 21, 0.3);
+}
+
+/* 🎬 Image Overlay Effect */
+.card-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.movie-img {
+  height: 230px;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease-in-out;
+}
+
+.movie-card:hover .movie-img {
+  transform: scale(1.1);
+  filter: brightness(0.8);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.movie-card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  color: #facc15;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* 🧾 Details */
+.movie-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.movie-desc {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  min-height: 40px;
+}
+
+.movie-meta p {
+  margin: 2px 0;
+  color: #d1d5db;
+  font-size: 0.9rem;
+}
+
+/* ✨ Buttons */
+.glow-btn {
+  border-color: #facc15 !important;
+  color: #facc15 !important;
+  transition: all 0.3s ease;
+  border-radius: 30px !important;
+  font-weight: 600;
+}
+
+.glow-btn:hover {
+  background: linear-gradient(135deg, #facc15, #fbbf24);
+  color: #111 !important;
+  box-shadow: 0 0 12px rgba(250, 204, 21, 0.4);
+}
+
+.glow-btn-del {
+  border-color: #ef4444 !important;
+  color: #ef4444 !important;
+  border-radius: 30px !important;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.glow-btn-del:hover {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: #fff !important;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.4);
+}
+
+/* 🧭 Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #facc15;
+}
