@@ -1,0 +1,312 @@
+/* ===== Overall Layout ===== */
+.men-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  background: linear-gradient(135deg, #f8f9fa, #fdfdfd);
+  padding: 30px 24px;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== Sidebar (Filter Panel) ===== */
+.filter-sidebar {
+  flex: 1;
+  min-width: 260px;
+  max-width: 300px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 18px;
+  padding: 20px 22px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+  border: 1px solid rgba(230, 230, 230, 0.5);
+}
+
+/* ===== Sidebar Header ===== */
+.filter-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-head h5 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.reset-btn {
+  border: none;
+  background: #f0f0f0;
+  color: #333;
+  padding: 6px 14px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reset-btn:hover {
+  background: #1a1a1a;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.filter-divider {
+  height: 1px;
+  background: rgba(200, 200, 200, 0.4);
+  margin: 16px 0;
+}
+
+/* ===== Filter Groups ===== */
+.filter-box {
+  margin-bottom: 18px;
+  background: #fff;
+  border: 1px solid rgba(230, 230, 230, 0.6);
+  border-radius: 12px;
+  padding: 10px 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  transition: 0.3s;
+}
+
+.filter-box:hover {
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.06);
+}
+
+.filter-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.filter-title h6 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #222;
+  margin: 0;
+}
+
+.chevron {
+  transition: transform 0.3s ease;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.chevron.open {
+  transform: rotate(180deg);
+}
+
+/* ===== Filter Options ===== */
+.filter-options {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filter-options label {
+  font-size: 0.9rem;
+  color: #555;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s color;
+}
+
+.filter-options label:hover {
+  color: #000;
+}
+
+.filter-options input {
+  width: 16px;
+  height: 16px;
+  accent-color: #111;
+}
+
+/* ===== Product Grid ===== */
+.men-grid {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+  align-items: stretch; /* ensures all cards are equal height */
+}
+
+/* ===== Card ===== */
+.men-item {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s ease;
+  height: 460px; /* fixed uniform height */
+  position: relative;
+}
+
+.men-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Card Image ===== */
+.img-wrap {
+  position: relative;
+  width: 100%;
+  height: 250px; /* same for all */
+  overflow: hidden;
+  background: #f5f5f5;
+  border-bottom: 1px solid rgba(230, 230, 230, 0.5);
+}
+
+.img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.img-wrap:hover img {
+  transform: scale(1.06);
+}
+
+.like-icon {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 1.5rem;
+  color: #666;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.like-icon:hover {
+  color: crimson;
+}
+
+/* ===== Card Content ===== */
+.men-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px 18px;
+}
+
+.men-info h6 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 4px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.men-info .desc {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 6px;
+  line-height: 1.3rem;
+  flex-grow: 1; /* balances text height */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.price {
+  color: #111;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.meta {
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: 2px;
+  margin-bottom: 10px;
+}
+
+/* ===== Action Buttons ===== */
+.action-btns {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.action-btns button {
+  flex: 1;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit {
+  background: linear-gradient(135deg, #007bff, #0056d2);
+}
+
+.edit:hover {
+  background: linear-gradient(135deg, #0056d2, #0042a8);
+}
+
+.delete {
+  background: linear-gradient(135deg, #f44336, #d32f2f);
+}
+
+.delete:hover {
+  background: linear-gradient(135deg, #d32f2f, #b71c1c);
+}
+
+.no-items {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #666;
+  margin-top: 40px;
+  font-weight: 500;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+  .men-section {
+    flex-direction: column;
+  }
+
+  .filter-sidebar {
+    position: relative;
+    width: 100%;
+  }
+
+  .men-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .men-item {
+    height: 430px;
+  }
+}
+
+@media (max-width: 576px) {
+  .men-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .img-wrap {
+    height: 220px;
+  }
+
+  .men-item {
+    height: auto;
+  }
+}
