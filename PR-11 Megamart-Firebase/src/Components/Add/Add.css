@@ -1,0 +1,113 @@
+.add-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #cce3ff, #f8f9ff, #e3f2fd);
+  padding: 2rem;
+}
+
+.card {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 1.5rem;
+  max-width: 700px;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.title {
+  font-weight: 800;
+  text-align: center;
+  color: #1a1a1a;
+  font-size: 1.8rem;
+  letter-spacing: 0.5px;
+}
+
+form {
+  margin-top: 1.5rem;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #333;
+}
+
+.form-control,
+.form-select {
+  border-radius: 10px;
+  border: 1px solid #ced4da;
+  padding: 10px 12px;
+  transition: all 0.2s;
+  background-color: #fff;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+.error {
+  color: #e63946;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  display: block;
+}
+
+.is-invalid {
+  border-color: #e63946 !important;
+}
+
+button.btn-primary {
+  background: linear-gradient(135deg, #007bff, #4c8df7);
+  border: none;
+  font-weight: 600;
+  padding: 10px 30px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+button.btn-primary:hover {
+  background: linear-gradient(135deg, #0062cc, #3c7bef);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 18px rgba(0, 98, 204, 0.3);
+}
+
+button.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.d-flex.flex-wrap.gap-3 .form-check {
+  background: #f8f9fa;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  transition: all 0.3s;
+}
+
+.d-flex.flex-wrap.gap-3 .form-check:hover {
+  background: #e7f1ff;
+  border-color: #0d6efd;
+}
+
+@media (max-width: 576px) {
+  .card {
+    padding: 1.5rem !important;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .form-label {
+    font-size: 0.9rem;
+  }
+}

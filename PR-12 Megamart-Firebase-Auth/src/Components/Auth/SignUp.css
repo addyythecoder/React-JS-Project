@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
+
+.auth-container {
+  width: 400px;
+  margin: 80px auto;
+  padding: 35px;
+  border-radius: 12px;
+  background: #fafafa;
+  box-shadow: 0 13px 30px rgba(0,0,0,0.15);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.auth-container h2 {
+  margin-bottom: 25px;
+  color: #222;
+  font-weight: 600;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 11px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  transition: .2s;
+}
+
+.auth-container input:focus {
+  border-color: #ff6b6b;
+  box-shadow: 0 0 4px rgba(255,107,107,0.4);
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 11px;
+  border: none;
+  background: #ff6b6b;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: .3s;
+}
+
+.auth-container button:hover {
+  background: #e05b5b;
+}
+
+.auth-container p {
+  margin-top: 15px;
+}
+
+.auth-container a {
+  color: #ff6b6b;
+  font-weight: 500;
+}
