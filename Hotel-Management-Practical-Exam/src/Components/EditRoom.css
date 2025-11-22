@@ -1,0 +1,167 @@
+/* ---------- Page Background ---------- */
+body {
+  background: linear-gradient(180deg, #ffffff 0%, #fbfbfb 40%, #f4f3ef 100%);
+  min-height: 100vh;
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Left vignette — subtle premium hotel feel */
+.app-vignette {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 140px;
+  background: linear-gradient(90deg, rgba(245,244,245,0.9) 0%, rgba(255,255,255,0) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ---------- Card Container ---------- */
+.edit-container {
+  margin: 32px auto;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 15px 45px rgba(0,0,0,0.12);
+  padding: 46px 48px;
+  position: relative;
+  z-index: 2;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+/* Hover lift */
+.edit-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 60px rgba(0,0,0,0.18);
+}
+
+/* Width */
+@media (min-width: 992px) { .edit-container { width: 720px; } }
+@media (max-width: 991px) {
+  .edit-container { width: calc(100% - 40px); padding: 28px; border-radius: 14px; }
+}
+
+/* ---------- Heading ---------- */
+.edit-container h2 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  text-align: center;
+  color: #8c6e4f;                 /* Same hotel accent */
+  margin-bottom: 28px;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.3px;
+}
+
+/* ---------- Labels ---------- */
+.edit-container .form-label,
+.edit-container label {
+  display: block;
+  font-weight: 600;
+  color: #000;                    /* Black for clarity */
+  margin-bottom: 8px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ---------- Inputs & Selects ---------- */
+.edit-container .form-control,
+.edit-container .form-select,
+.edit-container textarea.form-control {
+  border-radius: 10px;
+  background: #f4f1ed;            /* Light cream */
+  border: 1.5px solid #e1e1e1;
+  padding: 0.8rem 1rem;
+  font-size: 0.95rem;
+  color: #3a3a3a;
+  transition: all 0.18s ease;
+}
+
+.edit-container .form-control::placeholder {
+  color: #b6b6b6;
+}
+
+/* Focus */
+.edit-container .form-control:focus,
+.edit-container .form-select:focus {
+  outline: none;
+  border-color: #8c6e4f;
+  box-shadow: 0 4px 18px rgba(140,110,79,0.18);
+  background: #fff !important;
+  transform: translateY(-1px);
+}
+
+/* Textarea height */
+.edit-container textarea.form-control { min-height: 96px; }
+
+/* ---------- File Input ---------- */
+.edit-container input[type="file"] {
+  border-radius: 10px;
+  padding: 0.7rem 1rem;
+  background: #f4f1ed;
+  border: 1.5px solid #e1e1e1;
+  font-size: 0.95rem;
+  color: #3a3a3a;
+}
+
+/* File button */
+.edit-container input[type="file"]::file-selector-button,
+.edit-container input[type="file"]::-webkit-file-upload-button {
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #d5c8b5;
+  background: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+
+.edit-container input[type="file"]::file-selector-button:hover,
+.edit-container input[type="file"]::-webkit-file-upload-button:hover {
+  background: #f1ebe4;
+}
+
+/* ---------- Error Text ---------- */
+.edit-container small.text-danger {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #e45959;
+}
+
+/* ---------- Submit Button ---------- */
+.edit-container .btn-primary {
+  background: linear-gradient(90deg, #8c6e4f, #a88b67);
+  border: none;
+  padding: 0.85rem 2.6rem;
+  border-radius: 32px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff !important;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 8px 25px rgba(168,139,103,0.3);
+  transition: transform .15s ease, box-shadow .15s ease;
+  width: 100%;
+}
+
+.edit-container .btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(168,139,103,0.45);
+  opacity: 0.97;
+}
+
+.edit-container .btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ---------- Spacing helpers ---------- */
+.edit-container .mb-3 { margin-bottom: 20px !important; }
+.edit-container .mb-4 { margin-bottom: 26px !important; }
+
+@media (max-width: 480px) {
+  .edit-container h2 { font-size: 1.6rem; }
+  .edit-container .btn-primary { font-size: 0.95rem; padding: 0.7rem 1.8rem; }
+}

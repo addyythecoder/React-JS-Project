@@ -1,0 +1,243 @@
+:root{
+  /* Refined Hotel Palette */
+  --bg-cream: #fefcf8;
+  --bg-off: #fdfaf3;
+  --muted-bg: #f5efe3;
+  --accent: #b89d5b;
+  --accent-dark: #a38346;
+  --border: #ddd0ad;
+  --soft-border: #d4c296;
+  --text-dark: #3d3d3d;
+  --text-warm: #5a4830;
+  --success: #28743d;
+
+  /* System */
+  --radius-sm: .35rem;
+  --radius-md: .65rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.375rem;
+  --card-radius: 22px;
+  --shadow-1: 0 4px 18px rgba(0,0,0,0.06);
+  --shadow-2: 0 12px 28px rgba(0,0,0,0.12);
+  --transition: 0.22s ease;
+  --container-max: 1320px;
+
+  /* Typography */
+  --ff-heading: 'Playfair Display', Georgia, serif;
+  --ff-base: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto;
+  --sz-base: 1rem;
+}
+
+/* Page container */
+#root {
+  max-width: var(--container-max);
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.25rem;
+  text-align: center;
+  font-family: var(--ff-base);
+  color: var(--text-dark);
+  box-sizing: border-box;
+}
+
+/* Generic card */
+.card {
+  background: var(--bg-cream);
+  border: 1px solid var(--border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow-1);
+  padding: 1.75rem;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-2);
+}
+
+/* Premium elevated card */
+.card--elevated {
+  box-shadow: var(--shadow-2) !important;
+}
+
+/* Headings */
+.card h2, .card h3 {
+  color: var(--accent);
+  font-family: var(--ff-heading);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+/* Form Labels */
+.form-label {
+  text-align: left;
+  display: block;
+  font-weight: 600;
+  color: var(--text-warm);
+  margin-bottom: .4rem;
+}
+
+/* Inputs */
+.form-control, .form-select, .booking-input {
+  width: 100%;
+  background-color: var(--bg-off);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--soft-border);
+  padding: .75rem;
+  color: var(--text-dark);
+  font-size: var(--sz-base);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.form-control:focus, .form-select:focus, .booking-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 0.25rem rgba(184,157,91,0.15);
+  outline: none;
+  background: #fff;
+}
+
+/* Validation */
+small.text-danger {
+  margin-top: .35rem;
+  color: #c23b3b;
+  display: block;
+  font-size: .85rem;
+}
+
+/* Buttons */
+.btn {
+  padding: .65rem 1.25rem;
+  border: none;
+  font-weight: 600;
+  border-radius: .75rem;
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.btn--primary {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background-color: var(--accent-dark);
+  transform: translateY(-2px);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  padding: .55rem 1.25rem;
+  border-radius: 50px;
+}
+
+.btn--outline:hover {
+  background-color: var(--accent);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Hotel room card */
+.hotel-card {
+  background: #ffffff;
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  border: 1px solid #efe8d9;
+  transition: transform var(--transition), box-shadow var(--transition);
+  text-align: left;
+}
+
+.hotel-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-2);
+}
+
+/* Image */
+.img-container {
+  height: 240px;
+  overflow: hidden;
+  background: #fafafa;
+  border-bottom: 1px solid #eee;
+}
+.room-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+.hotel-card:hover .room-img { transform: scale(1.08); }
+
+/* Room details */
+.room-meta {
+  padding: 1rem;
+}
+.room-number {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #6b4f1d;
+  font-family: var(--ff-heading);
+}
+.room-price {
+  color: var(--success);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Booking section */
+.booking-section {
+  background-color: var(--muted-bg);
+  padding: 1rem;
+  border-radius: var(--radius-lg);
+  text-align: left;
+}
+
+.booking-title {
+  font-family: var(--ff-heading);
+  color: var(--text-warm);
+  font-weight: 700;
+  margin-bottom: .75rem;
+}
+
+/* Action buttons container */
+.card-actions {
+  display: flex;
+  gap: .5rem;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+/* Back button */
+.back-home-btn {
+  padding: .5rem 1.5rem;
+  border-radius: 50px;
+  border: 2px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  font-weight: 600;
+  transition: all var(--transition);
+}
+
+.back-home-btn:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Utility classes */
+.text-center { text-align: center; }
+.mb-1 { margin-bottom: .5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.p-1 { padding: .5rem; }
+.p-2 { padding: 1rem; }
+
+/* Responsive */
+@media (max-width: 1100px) {
+  :root { --container-max: 980px; }
+}
+@media (max-width: 720px) {
+  #root { padding: 1rem; }
+  .img-container { height: 180px; }
+  .room-price { font-size: 1.3rem; }
+  .card-actions { justify-content: center; }
+}

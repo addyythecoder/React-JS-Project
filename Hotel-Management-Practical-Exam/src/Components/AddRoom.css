@@ -1,0 +1,152 @@
+/* === HOTEL THEME — ADD ROOM CARD === */
+
+:root {
+  --accent: #8c6e4f;        /* Soft Coffee Brown */
+  --accent-2: #a88b67;      /* Light Coffee Gold */
+  --muted-text: #3a3a3a;    
+  --muted-2: #7b7b7b;       
+  --input-bg: #f4f1ed;      /* Light Cream */
+  --card-bg: #ffffff;       
+  --card-border: rgba(0,0,0,0.06);
+  --error: #e45959;
+  --shadow: 0 15px 40px rgba(0,0,0,0.08);
+  --title-font: 'Playfair Display', serif;
+  --body-font: 'Inter', sans-serif;
+}
+
+/* Card wrapper */
+.add-product-card {
+  background: var(--card-bg);
+  border-radius: 18px;
+  padding: 2.4rem;
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow);
+  transition: 0.25s ease;
+  margin-top: 12px;
+  font-family: var(--body-font);
+}
+
+.add-product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 60px rgba(0,0,0,0.16);
+}
+
+/* Heading */
+.add-product-card h3 {
+  color: var(--accent) !important;
+  font-weight: 700;
+  font-size: 1.85rem;
+  letter-spacing: 0.5px;
+  font-family: var(--title-font);
+  text-align: center;
+  margin-bottom: 1.4rem;
+}
+
+/* Labels */
+.add-product-card label,
+.add-product-card .form-label {
+  color: #000;
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 1rem;
+  font-family: var(--body-font);
+}
+
+/* Form Controls */
+.add-product-card .form-control,
+.add-product-card .form-select,
+.add-product-card textarea.form-control {
+  background: var(--input-bg) !important;
+  border: 1.5px solid #e1e1e1;
+  padding: 0.75rem 0.9rem;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  transition: 0.2s ease;
+  color: var(--muted-text);
+  font-family: var(--body-font);
+}
+
+.add-product-card .form-control:hover,
+.add-product-card .form-select:hover {
+  border-color: #c5c5c5;
+}
+
+/* Focus */
+.add-product-card .form-control:focus,
+.add-product-card .form-select:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 3px rgba(140,110,79,0.25);
+  background: #fff !important;
+  outline: none;
+  transform: translateY(-1px);
+}
+
+/* Placeholder */
+.add-product-card .form-control::placeholder {
+  color: #9c9c9c;
+}
+
+/* File input */
+.add-product-card input[type="file"] {
+  background: #fff !important;
+  border: 1.5px solid #e1e1e1 !important;
+  padding: 0.75rem 0.9rem;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  transition: 0.2s ease;
+  color: var(--muted-text);
+}
+
+/* Error text */
+.add-product-card small.text-danger {
+  color: var(--error) !important;
+  font-weight: 600;
+  margin-top: 6px;
+  display: block;
+}
+
+/* Submit Button — Premium Hotel Style */
+.add-product-card .btn-primary {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border: none !important;
+  padding: 0.8rem 2.4rem;
+  border-radius: 32px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff !important;
+  box-shadow: 0 8px 25px rgba(168,139,103,0.35);
+  transition: 0.25s ease;
+  width: 100%;
+  font-family: var(--body-font);
+}
+
+.add-product-card .btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(168,139,103,0.45);
+  opacity: 0.97;
+}
+
+/* Submit disabled */
+.add-product-card .btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Helper text */
+.add-product-card .form-text {
+  color: var(--muted-2);
+  font-size: 0.85rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 767px) {
+  .add-product-card {
+    padding: 1.5rem;
+    border-radius: 14px;
+  }
+  .add-product-card h3 {
+    font-size: 1.6rem;
+  }
+}
